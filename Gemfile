@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.5.3'
+ruby '2.7.2'
 
 gem 'rails', '~> 5.2.4.3'
 gem 'pg', '>= 0.18', '< 2.0'
@@ -17,18 +17,21 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.4.1'
 gem 'bootsnap'
 gem 'jquery-rails'
-
+gem 'faraday'
+gem 'fast_jsonapi'
 
 group :development, :test do
   gem 'pry'
+  gem 'faker'
 end
 
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'faker'
   gem 'simplecov'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
